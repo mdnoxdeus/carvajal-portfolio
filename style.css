@@ -4,108 +4,96 @@
 	box-sizing: border-box;
 }
 
-body, html {
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: 'Spartan', sans-serif;
+}
+
+h2 {
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-size: 69px;
+  color: #DDDAD8;
+}
+
+hr {
+	width: 100%;
+	height: 2px;
+	background-color: #333333;
+} 
+
+ul {
+	list-style: none;
+}
+
+.sidebar, .bgside {
+	background-color: #DDDAD8;
+}
+
+.sidenav {
   height: 100%;
-  scroll-behavior: smooth;
+  width: 20%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #DDDAD8;
+  overflow-x: hidden;
+  padding-top: 20px;
 }
 
-a:link {
-	text-decoration: none;
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
 }
 
-a:hover {
-	text-decoration: none;
+.sidenav a:hover {
+  color: #f1f1f1;
 }
 
-.navbar {
-	padding-top: 10px;
-	padding-bottom: 15px;
+.main {
+  margin-left: 160px; /* Same as the width of the sidenav */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
 }
 
-.navbar-logo {
-	margin-top: 5px;
-	margin-bottom: 8px;
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
 }
 
-.navlink {
-	margin-left: 1rem;
-	margin-right: 1rem;
-	color: white;
+.tophead {
+	margin-top: 1rem;
+	margin-bottom: 5rem;
 }
 
-.bg-nav {
-	background-color: #191E2C;
+.bg-body {
+  background-color: #8A8A8A;
 }
 
-.bg-3 {
-	background-color: #647CBC;
+.card {
+  background-color: #335C67;
 }
 
-.bg-card {
-	background-color: #A9B6DA;
+.card-link {
+  color: white;
 }
 
-.parallax1 {
+.parallax {
   /* The image used */
-  background-image: url('https://wallpaperaccess.com/full/5502887.png');
+  background-image: url('https://i.pinimg.com/originals/dc/63/f3/dc63f3c527d85db092ab85fd4b097bfa.jpg');
 
   /* Full height */
-  height: 60%; 
+  height: 100%; 
 
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
-  background-color: darkgrey;
-  background-position: 50% 50%;
+  background-position: center;
   background-repeat: no-repeat;
-  background-size: fill;
-  padding-bottom: 50px;
-  padding-top: 50px;
-}
-
-/* Video Parallax Section Start*/
-.ParallaxVideo { 
-  height: 100%;
-  background-attachment: fixed;
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  padding-bottom: 50px;
-  padding-top: 50px; 
-}
-
-.ParallaxVideo video { 
-	clip: rect(0, 1920px, 1080px, 0);
-    min-width: 0%;
-    position: fixed;
-  top:0;
-  z-index: -9999;
-}
-/* Video Parallax Section End*/
-
-
-#pre-footer {
-	padding: 1rem;
-	background-color: #374B81;
-	color: white;
-}
-
-#pre-footer > div {
-	display: inline-block;
-	width: 20%;
-	vertical-align: top;
-	min-height: 175px;
-	width: 20%;
-	margin-left: 2rem;
-	margin-right: 2rem;
-}
-
-#pre-footer > div > * {
-	margin: 0.3rem, ;
-}
-
-footer {
-	padding: 0.7rem;
-}
-
-footer span {
-	margin: 0 0.5;
+  background-size: cover;
 }
